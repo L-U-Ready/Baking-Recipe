@@ -1,0 +1,81 @@
+@charset "UTF-8";@charset "UTF-8";
+
+@font-face {
+  font-family: 'BMHANNAPro';
+  src: url('/teamProject/src/main/webapp/resources/BMHANNAPro.woff') format('woff');
+}
+
+ body, html {
+    width : 100%; /* 전체 높이를 브라우저 창에 맞춤 */
+    margin: 0; /* 기본 마진 제거 */
+    display: flex; /* Flexbox를 사용하여 자식 요소를 중앙에 배치 */
+  	justify-content: center; /* 수평 중앙 정렬 */
+  	align-items: center; /* 수직 중앙 정렬 */
+  }
+
+  /* 배경 이미지를 설정하고 고정시키는 클래스 */
+  body{
+    font-family: 'BMHANNAPro', sans-serif;
+   
+    background-image: url(images/default-pink.png); /* 배경 이미지 설정 */
+
+    /* 이미지가 항상 전체 화면을 채우도록 설정 */
+   	width: 100%; /* 높이를 전체 페이지에 맞춤 */
+    background-position: center; /* 이미지를 중앙에 배치 */
+    background-repeat: no-repeat; /* 이미지 반복 없음 */
+    background-size: cover; /* 이미지가 항상 전체를 덮도록 설정 */
+    background-attachment: fixed; /* 스크롤 시 이미지가 움직이지 않도록 설정 */
+  }
+  .snack-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* 여백을 균등하게 분배 */
+    align-items: flex-start;
+    margin: auto; /* 중앙 정렬을 위해 추가 */
+   	width: 700px;
+
+  }
+  .snack-wrapper {
+  	flex: 1 1 auto; /* 유동적 너비 설정, 20px는 간격을 고려 */
+    width: 332px; /* 분홍색 바의 너비에 맞춤 */
+	margin-right: 5px; /* 오른쪽 여백을 5px로 설정합니다. */
+	margin-left: 5px; /* 왼쪽 여백을 5px로 설정합니다. */
+	margin-bottom: 50px;
+    position: relative; /* 상대적 위치 */
+    display: flex; /* 바와 이미지를 위해 flexbox 사용 */
+    flex-direction: column; /* 위에서 아래로 쌓기 */
+    align-items: center; /* 중앙 정렬 */
+    max-width: calc(50% - 50px); /* 컨테이너 너비의 50%에서 항목 사이의 간격을 뺀 값을 최대 너비로 설정 */
+  }
+  .snack-bar {
+  	height: 38px; /* 분홍색 바의 높이 */
+    background-color: #D38883; /* 분홍색 바의 배경색 */
+    width: 332px; /* 분홍색 바의 너비 */
+  }
+  .snack-name {
+    text-align: center;
+    color: #C25E60; /* 글자 색상 */
+    padding: 5px 0; /* 이름 위 아래에 패딩 */
+    position: absolute; /* 절대 위치 */
+    bottom: -35px; /* 이미지 아래에 위치 */
+    left: 0; /* 왼쪽 정렬 */
+    width: 100%; /* 전체 너비 */
+    font-size: 20px;
+  }
+  .snack img {
+    width: 332px; /* 이미지의 너비를 분홍색 바의 너비와 동일하게 설정 */
+    height: 202px;
+    display: block; /* 블록 레벨 요소로 설정 */
+    object-fit: cover; /* 이미지가 컨테이너를 가득 채우도록 조정 */
+    box-shadow: 0 12px 8px -4px rgba(0, 0, 0, 0.2); /* 수평 오프셋, 수직 오프셋, 흐림 반경, 확산 반경, 색상 */
+  } 
+  .img-hover-effect {
+    transition: transform 0.3s, opacity 0.3s; /* 효과가 부드럽게 전환되도록 함 */
+  }
+
+  .img-hover-effect:hover {
+    transform: scale(1.05); /* 이미지를 5% 더 크게 확대 */
+    opacity: 0.7; /* 이미지의 투명도를 70%로 줄임 */
+  }
+  
+  

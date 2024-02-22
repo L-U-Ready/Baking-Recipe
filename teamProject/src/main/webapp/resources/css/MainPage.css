@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+
+ body, html {
+    height: 100%; /* 전체 높이를 브라우저 창에 맞춤 */
+    margin: 0; /* 기본 마진 제거 */
+  }
+
+  /* 배경 이미지를 설정하고 고정시키는 클래스 */
+  body{
+   
+    background-image: url(images/default-pink.png); /* 배경 이미지 설정 */
+
+    /* 이미지가 항상 전체 화면을 채우도록 설정 */
+    height: 100%; /* 높이를 전체 페이지에 맞춤 */
+    background-position: center; /* 이미지를 중앙에 배치 */
+    background-repeat: no-repeat; /* 이미지 반복 없음 */
+    background-size: cover; /* 이미지가 항상 전체를 덮도록 설정 */
+    background-attachment: fixed; /* 스크롤 시 이미지가 움직이지 않도록 설정 */
+  }
+      /* CSS 코드 */
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 2fr 1fr; /* 3개의 열, 첫 번째 열은 사이드바로 고정, 나머지 두 열은 동일한 비율 */
+  gap: 20px; /* 각 열 사이의 간격 */
+  padding: 20px; /* 전체 컨테이너 내부 여백 */
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #ffefd5;
+  float: left;
+  height: 235px;
+  text-align: center;
+  margin: 0 auto ;
+  font-family: 'Cooper Black', sans-serif;
+  border: 3px solid #D38883;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-button {
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 0px;
+  background-color: #ffefd5;
+  color: #CF5C69;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  border-bottom: 3px solid #D38883;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+
+.category-button a {
+  color: #CF5C69;
+  text-decoration: none;
+}
+
+.category-button:hover {
+  background-color: #CF5C69;
+}
+
+.category-button:hover a {
+  color: #ffefd5;
+}
+
+.category-button:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.sidebar::before {
+  content: ''; /* 가상 요소를 추가합니다. */
+  display: block; /* 블록 요소로 만듭니다. */
+  width: 100%; /* 사이드바의 전체 너비를 가집니다. */
+  height: 30px; /* 빈칸의 높이를 조절합니다. */
+  background-color: #D38883; /* 원하는 색으로 채웁니다. */
+  /* 필요한 경우 다른 스타일을 추가합니다. */
+}
+
+.main-content h1{
+	font-family: 'BMHANNAPro', sans-serif;
+	color: #CC6666;
+    text-align: center;
+    font-size:45px;
+    margin: 0 auto ;
+    margin-bottom : 20px;
+    
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 두 개의 열을 가진 그리드 생성 */
+  margin: 0 auto ;
+  gap: 20px;
+  justify-content: center;
+  place-items: center;
+}
+
+.grid-item {
+  text-align: center;
+  width:100%;
+  max-width:800px;
+  border: 3px solid #D38883;
+  padding:0px;
+  margin-bottom:20px;
+  height: calc(100% - 30px);
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.grid-item img {
+  padding : 0;
+  max-width: 100%;
+  height: auto;
+}
+.grid-item::before {
+  content: ''; /* 가상 요소를 추가합니다. */
+  display: block; /* 블록 요소로 만듭니다. */
+  width: 100%; /* 사이드바의 전체 너비를 가집니다. */
+  height: 30px; /* 빈칸의 높이를 조절합니다. */
+  background-color: #D38883; /* 원하는 색으로 채웁니다. */
+  /* 필요한 경우 다른 스타일을 추가합니다. */
+}
+
+.event-section h1{
+	font-family: 'BMHANNAPro', sans-serif;
+	color: #CC6666;
+    text-align: center;
+    font-size:45px;
+    margin: 0 auto;
+    margin-bottom : 20px;
+}
+
+.event-grid-item {
+  text-align: center;
+  width:100%;
+  max-width:500px;
+  min-width:50px;
+  border: 3px solid #D38883;
+  padding:0px;
+  margin-bottom:20px;
+  height:auto;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+  margin:0 auto;
+}
+
+.event-grid-item img{
+	max-width:100%;
+	height:auto;
+}
+
+.event-grid-item ::before {
+  content: ''; /* 가상 요소를 추가합니다. */
+  display: block; /* 블록 요소로 만듭니다. */
+  width: 100%; /* 사이드바의 전체 너비를 가집니다. */
+  height: 30px; /* 빈칸의 높이를 조절합니다. */
+  background-color: #D38883; /* 원하는 색으로 채웁니다. */
+  /* 필요한 경우 다른 스타일을 추가합니다. */
+}
+
